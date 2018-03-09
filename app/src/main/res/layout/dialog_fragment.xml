@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:id="@+id/DSignInLabl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="2dp"
+    android:layout_marginTop="10dp"
+    android:text="PLZ SignIn To Post Location Review.."
+    />
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/DGSignIn"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/DSignInLabl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

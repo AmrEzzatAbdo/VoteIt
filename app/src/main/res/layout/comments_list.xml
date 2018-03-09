@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#e1d8d8"
+        android:scaleX=".9"
+        android:scaleY=".8">
+
+        <TextView
+            android:id="@+id/Pname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Name"
+            android:textSize="15dp" />
+
+        <RatingBar
+            android:id="@+id/Prate"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/Pname"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp" />
+
+        <TextView
+            android:id="@+id/Pcomment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Pname"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="5dp"
+            android:text="user commentuser commentuser commentuser commentuser commentuser commentuser commentuser comment" />
+    </RelativeLayout>
+</RelativeLayout>

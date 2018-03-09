@@ -1,0 +1,14 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <description>Provides an action which allow you quickly connect your Android device over WiFi to install, run and debug your applications without a USB connected by pressing one button.
+      &lt;br&gt;
+      Connect your device using a USB cable and press the Android WiFi ADB button. Once the device be connected over WiFi you'll see an IntelliJ/Android Studio notification. Now you can disconnect your USB cable and enjoy deploying, running and debugging your applications over WiFi.
+      &lt;br&gt;
+      The version 2.0 enables a window to check which of your devices are connected or not and connect/disconnect it manually if needed.</description>
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="LoggerInitializedWithForeignClass" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="loggerClassName" value="org.apache.log4j.Logger,org.slf4j.LoggerFactory,org.apache.commons.logging.LogFactory,java.util.logging.Logger" />
+      <option name="loggerFactoryMethodName" value="getLogger,getLogger,getLog,getLogger" />
+    </inspection_tool>
+  </profile>
+</component>

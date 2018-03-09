@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#96ded1d1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="#f1bcb2ba"
+        android:scaleX=".98"
+        android:scaleY=".90">
+
+        <TextView
+            android:id="@+id/VName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#79642f"
+            android:focusable="false"
+            android:text="App Name" />
+
+        <ImageView
+            android:id="@+id/VImage"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_below="@id/VName"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:focusable="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/com_facebook_profile_picture_blank_square" />
+
+        <ImageButton
+            android:id="@+id/direction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/VImage"
+            android:layout_alignRight="@+id/VImage"
+            android:layout_alignTop="@+id/VImage"
+            android:background="@drawable/fab"
+            android:focusable="false"
+            android:src="@android:drawable/ic_menu_directions" />
+
+        <!--onclick on rating go to comments -->
+        <TextView
+            android:id="@+id/RatingValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/VName"
+            android:layout_alignBottom="@+id/VName"
+            android:layout_toLeftOf="@+id/imageView2"
+            android:layout_toStartOf="@+id/imageView2"
+            android:focusable="false"
+            android:textColor="#79642f"
+            android:text="Rating Value" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/VImage"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/VImage"
+            android:focusable="false"
+            android:src="@android:drawable/star_big_on" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/VImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:numStars="5"
+            android:rating="0.5"
+            android:stepSize="0.25" />
+        <Button
+            android:layout_below="@id/VImage"
+            android:layout_width="94dp"
+            android:layout_toLeftOf="@id/ratingBar"
+            android:layout_height="40dp"
+            android:textSize="12sp"
+            android:text="Comment"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:background="#c1c4c1"
+            android:textStyle="italic"
+            android:textColor="#615647"
+            android:onClick="CommentClick"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

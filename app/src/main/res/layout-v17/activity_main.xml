@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d7c38d"
+    tools:context="com.example.amr.voteit.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/chickConnection"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#f4be59">
+
+        <TextView
+            android:id="@+id/Clable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="No network Connection" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/Clable" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/headers"
+        android:layout_below="@id/chickConnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#2b2119">
+
+            <TextView
+                android:id="@+id/SignInLabl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:fontFamily="casual"
+                android:shadowColor="#960f0f"
+                android:text="Quik Signin"
+                android:textColor="#964e13"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/FacebookSignin"
+                android:layout_width="45dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/SignInLabl"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/GooglSignin"
+                android:background="@color/com_facebook_blue"
+                android:src="@drawable/com_facebook_button_login_logo" />
+
+            <ImageButton
+                android:id="@+id/GooglSignin"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="GoogleSignIn"
+                android:src="@drawable/common_google_signin_btn_icon_dark_pressed" />
+        </RelativeLayout>
+
+        <!--uSER dETAILS -->
+        <RelativeLayout
+            android:id="@+id/userData"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#745f4d">
+
+            <ImageView
+                android:id="@+id/UserImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp" />
+
+            <TextView
+                android:id="@+id/UserName"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/UserImage" />
+
+            <ImageButton
+                android:id="@+id/SignOutUser"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/common_full_open_on_phone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headers"
+        android:layout_margin="10dp"
+        android:background="#c6b87a">
+        <!--
+                <ImageView
+                    android:id="@+id/Logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:src="@android:drawable/star_big_on" />
+        -->
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:inputType="text"
+            android:onClick="search"
+            />
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:fontFamily="casual"
+            android:textColor="#e98f4c09"
+            android:textSize="16sp"
+            tools:targetApi="jelly_bean_mr1" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Positionlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Rs"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        />
+
+    <ImageButton
+        android:id="@+id/Floatingbutton"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/fab"
+        android:src="@android:drawable/ic_input_add"
+        android:text="New Button" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1623299335056519/5732606742"/>
+</RelativeLayout>
